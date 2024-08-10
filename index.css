@@ -1,9 +1,14 @@
+:root {
+    --site-theme-color: #f1f1f1;
+}
+
 body{
     font-family:'montserrat' ,sans-serif;
     margin:0;
     background-color: black;
     color: white;
     overflow:hidden;
+    scroll-behavior: smooth;
 }
 .main{
     display:flex;
@@ -24,10 +29,7 @@ body{
     border-radius:1rem;
     overflow: auto;
     padding:0 1.5rem 0 1.5rem;
-    scrollbar-color: rgb(238, 226, 226) black;
-    scrollbar-width:thin;
-    scroll-behavior: smooth;
-   
+    margin-left:9px;
 }
 
 .music-player{
@@ -245,8 +247,6 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
 }
 .player-control-icon{
     height:1rem;
@@ -285,8 +285,13 @@ a{
     border-radius: 50%;
     margin-top:-6px;
 }
-::-webkit-scrollbar-thumb {
-    background: red; 
-    border-radius: 10px;
-    scroll-padding: 70px;
-}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2em;
+    background: var(--site-theme-color);
+  }
